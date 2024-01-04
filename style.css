@@ -1,0 +1,1022 @@
+* { 
+    margin: 0;
+    font-family: Montserrat, Open Sans, serif;
+
+}
+
+
+#block1 {
+    max-height: 25px;
+    padding: 5px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    
+}
+
+#block2 {   
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    max-height: 25px;
+    margin-left: auto;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+ #overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 51, 0.35); 
+    position: fixed;
+    pointer-events: none;
+    display: none; 
+
+ }
+
+
+
+body {
+    max-width: 1300px;
+    margin: auto;
+}
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: #282828;
+    color: white;
+}
+
+body.dark #navbar {
+    background-color: #282828;
+
+}
+
+body.dark .menu {
+    color: white;
+}
+
+body.light #toggle-theme {
+    background-color: #282828;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+
+}
+
+body.dark #toggle-theme {
+    background-color: white;
+    color: #282828;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light #button2 a {
+    background-color: #282828;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+body.dark #button2 a {
+    background-color: white;
+    color: #282828;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+#button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.light #button3 a {
+    background-color: #282828;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+body.dark #button3 a {
+    background-color: white;
+    color: #282828;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+body.dark #iconbox svg path {
+    fill: white;
+}
+
+#iconbox svg {
+    height: 50px;
+    width: 50px;
+}
+
+body.dark #popupborder {
+    background: white;
+    color: black;
+}
+
+body.dark #navbaricon path {
+    fill: white;
+}
+
+
+body.dark #shopping-cart td {
+    background-color: #282828;
+}
+
+body.dark #shopping-cart th {
+    background-color: #282828;
+}
+
+body.dark .product-item {
+    background-color: #282828;
+}
+
+body.dark .product-item img {
+    background-color: #282828;
+}
+
+body.dark #btnEmpty {
+    background-color: #282828;
+}
+
+body.dark .txt-heading {
+    color: white;
+}
+
+body.dark .separate {
+    border-bottom: 3px solid white;
+}
+
+body.dark .createpost {
+    border-bottom: 3px solid white;
+}
+
+body.dark .commentsubmition .form .btn {
+    background-color: white;
+    color: black;
+}
+
+body.dark #loadMoreButton {
+    background-color: white;
+    color: black;
+}
+
+#navbar {
+
+    max-width: 1300px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    line-height: 50px;
+    justify-content: space-around;
+    overflow: hidden;
+    position: fixed;
+    background: white;
+    top: 0px;
+    box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.3);
+
+}
+
+.menu {
+   
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu:hover {
+   
+    text-align: center;
+    color: lightgray;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menuactive {
+   
+    text-align: center;
+    color: darkgray;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menubutton {
+    text-align: center;
+    color: #FFBF00;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menubutton:hover {
+    text-align: center;
+    color: #FFFF8F;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* index.php */
+
+#infoPopupTotal {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+
+  }
+
+  #infoPopup {
+    display: none;
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+#infoPopup h2 {
+    text-align: right;
+    justify-content: right;
+    align-items: right;
+}
+
+#infoPopup h3 {
+    font-size: 24px;
+}
+
+
+#closePopup {
+    display: none;
+    cursor: pointer;
+}
+
+
+#uppercontent {
+    max-width: 1300px;
+    margin: 150px auto auto auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+}
+
+#homeKebab {
+    border-radius: 2%;
+    max-width: 100%;
+}
+
+
+
+#uppercontent h1 {
+    font-size: 60px;
+    margin: 50px auto 50px auto;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+#uppercontent p {
+    font-family: Open Sans; 
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.g1 {
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+}
+
+.g2 {
+    justify-self: center;
+    align-self: center;
+}
+
+#lowercontent {
+    margin: 100px auto auto auto;
+}
+
+#lowercontent h2 {
+    font-size: 36px;
+    font-family: Roboto;
+    font-weight: bold;
+    margin: auto auto 25px auto;
+}
+
+#lowercontent p {
+    font-size: 18px;
+    font-family: Open Sans;
+    margin: auto auto 75px auto;
+    
+}
+
+#lowercontent2 {
+    margin: 100px auto 150px auto;
+}
+
+#lowercontent2 p {
+    font-size: 18px;
+    font-family: Open Sans;
+}
+
+#lowercontent2 h2 {
+    font-size: 36px;
+    font-family: Roboto;
+    margin: auto auto 25px auto;
+}
+
+#iconbox {
+    margin: 50px auto auto auto;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#contentbox {
+    margin: 100px auto 150px auto;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 40px;
+    
+}
+
+#box {
+    text-align: left;
+}
+
+#box p {
+    font-size: 16px;
+    font-family: Open Sans;
+    margin: auto auto 50px auto;
+}
+
+#box h3 {
+    font-family: Roboto;
+}
+
+/* reviews.php */
+
+#info {
+    margin: 150px auto auto auto;
+    max-width: 650px;
+    max-height: 50px;
+    width: 85%;
+    height: 85%;
+    border: 2px #D2042D;
+    border-style: solid;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 15px;
+    font-family: Open Sans;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#reviews {
+    margin: 150px auto 50px auto;
+}
+
+#reviews p {
+    font-family: Open Sans;
+}
+
+.separate {
+    border-bottom: 3px solid black;
+    margin: 25px auto 150px auto;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.createpost {
+    border-bottom: 3px solid black;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.commentspecific {
+    margin: 75px auto;
+    border-bottom: 2px solid lightgray;
+}
+
+.commentlist {
+    margin: 25px auto;
+}
+
+.commentlist h3 {
+    margin: auto;
+    font-size: 28px;
+}
+
+.commentlist h4 {
+    margin: auto auto 15px auto;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.commentsubmition .form .Name{
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: black;
+    margin: 5px auto;
+    resize: none;
+    outline: none;
+    border-style: solid;
+}
+
+.commentsubmition .form textarea {
+    resize: none;
+    background-color: white;
+    width: 450px;
+    height: 125px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    margin: 5px auto;
+    outline: none;
+    border-style: solid;
+    
+}
+
+.commentsubmition .form .btn {
+    background-color: #282828;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+    margin: 5px auto 50px auto;
+    
+}
+
+.commentsubmition .form .btn:hover {
+    cursor: pointer;
+}
+
+#loadMoreButton {
+    background-color: #282828;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+#loadmorebtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 100px auto;
+}
+
+/* regulations.php & settings.php */
+
+#regulamin {
+    margin: 150px auto;
+}
+
+
+p.footer {
+    font-family: Open Sans;
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+    margin: auto auto 10px auto;
+}
+
+#settings {
+    margin: 150px auto;
+}
+
+#settings p {
+    font-family: Open Sans;
+}
+
+#settingsContent1 {
+    margin: 100px auto auto auto;
+}
+
+#settingsContent3 {
+    margin: 100px auto;
+}
+
+#settingsContent4 {
+    margin: 100px auto 150px auto;
+}
+
+#settingsContent1 p {
+    font-family: Open Sans;
+}
+
+#settingsContent4 p {
+    font-family: Open Sans;
+}
+
+#settingsContent3 p {
+    font-family: Open Sans;
+}
+
+/* on-join popup */
+
+#navbar .icon {
+    display: none;
+
+}
+
+#popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+#popup h2 {
+  margin-bottom: 1rem;
+}
+
+#popup button {
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  background-color: #50C878;
+  cursor: pointer;
+}
+
+#popupborder {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* menu.php */
+
+#shopping-cart {
+	margin: 200px 40px 40px 40px;
+}
+
+#product-grid {
+	margin: 40px;
+}
+
+#shopping-cart table {
+	width: 100%;
+	background-color: #F0F0F0;
+}
+
+#shopping-cart table td {
+	background-color: #FFFFFF;
+}
+
+.txt-heading {
+	color: #211a1a;
+	border-bottom: 1px solid #E0E0E0;
+	overflow: auto;
+}
+
+#btnEmpty {
+	background-color: #ffffff;
+	border: #d00000 1px solid;
+	padding: 5px 10px;
+	color: #d00000;
+	float: right;
+	text-decoration: none;
+	border-radius: 3px;
+	margin: 10px 0px;
+}
+
+.btnAddAction {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #efefef;
+    border: #E0E0E0 1px solid;
+    color: #211a1a;
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#product-grid .txt-heading {
+	margin-bottom: 18px;
+}
+
+.product-item {
+	float: left;
+	background: #ffffff;
+	margin: 30px 30px 30px 0px;
+	border: #E0E0E0 1px solid;
+}
+
+.product-image {
+	height: 155px;
+	width: 250px;
+	background-color: #FFF;
+}
+
+.product-image img {
+	height: 155px;
+	width: 250px;
+	background-color: #FFF;
+}
+
+.cart-item-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.clear-float {
+	clear: both;
+}
+
+.demo-input-box {
+	border-radius: 2px;
+	border: #CCC 1px solid;
+	padding: 2px 1px;
+}
+
+.tbl-cart {
+	font-size: 0.9em;
+}
+
+.tbl-cart th {
+	font-weight: normal;
+}
+
+.menuwelcomediv {
+    margin: 150px auto;
+}
+
+.menuwelcomediv p{
+    font-family: Open Sans;
+}
+
+
+.product-title {
+	margin-bottom: 20px;
+}
+
+.product-price {
+	float:left;
+}
+
+.cart-action {
+	float: right;
+}
+
+.product-quantity {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: #E0E0E0 1px solid;
+}
+
+.product-tile-footer {
+    padding: 15px 15px 0px 15px;
+    overflow: auto;
+}
+
+.cart-item-image {
+	width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: #E0E0E0 1px solid;
+    padding: 5px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.no-records {
+	text-align: center;
+	clear: both;
+	margin: 38px 0px;
+}
+
+
+/* login system */
+
+
+
+.logincontainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 250px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logincontainer .logindiv {
+    max-width: 500px;
+    width: 100%;
+}
+.logincontainer h2 {
+    color: black;
+    font-size: 25px;
+    font-family: Montserrat;
+}
+
+.logincontainer h3 {
+    color: #6495ED;
+    font-size: 20px;
+}
+
+.logincontainer h4 {
+    color: #4caf50;
+    font-size: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.loginform label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.loginform input {
+    width: 480px;
+    padding: 8px;
+    margin-bottom: 15px;
+
+}
+
+#loginbtn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 500px;
+}
+
+#signbtn {
+    background-color: #6495ED;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 500px
+}
+
+p.error {
+    color: #ff0000;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+/* mobile view */
+
+
+
+
+@media (max-width: 700px) {
+    #uppercontent {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+    #contentbox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .g1 {
+        padding-left: 5%;
+    }
+    
+    #homeKebab {
+        max-width: 100%;
+    }
+    
+    #uppercontent h1 {
+        font-size: 48px;
+    }
+    
+    #lowercontent {
+        padding-left: 5%;
+    }
+    
+    #contentbox {
+        padding-left: 5%;
+    }
+    
+    
+    #reviews h1 {
+        font-size: 48px;
+    }
+    
+    #reviews {
+        padding-left: 5%;
+    }
+    
+    #regulamin h1 {
+        font-size: 48px;
+    }
+    
+    #regulamin {
+        padding-left: 5%;
+    }
+    
+    #settings {
+        padding-left: 5%;
+    }
+    
+    #settingsContent1 {
+        padding-left: 5%;
+    }
+    
+    #settingsContent2 {
+        padding-left: 5%;
+    }
+    
+    #settingsContent3 {
+        padding-left: 5%;
+    }
+    
+    #settingsContent4 {
+        padding-left: 5%;
+    }
+    
+    .commentsubmition {
+        padding-left: 5%;
+    }
+    
+    .createpost {
+        padding-left: 5%;
+    }
+    
+    .commentlist {
+        padding-left: 5%;
+    }
+    
+    .separate {
+        padding-left: 5%;
+    }
+    
+    #lowercontent2 {
+        padding-left: 5%;
+    }
+    
+    .postinfo {
+        padding-left: 5%;
+    }
+    
+    
+    
+    #popupborder {
+    background: white;
+    border-radius: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+.commentsubmition .form textarea {
+    resize: none;
+    background-color: white;
+    width: 300px;
+    height: 125px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    margin: 5px auto;
+    outline: none;
+    border-style: solid;
+    
+}
+
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .navigation a:not(:first-child) {
+        display: none;
+    }
+    #navbar .icon {
+         display: flex;
+         top: 2.5px;
+         right: 25px;
+         position: absolute;
+    
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .responsive {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .navigation.responsive {
+        position: relative;
+    }
+    .navigation.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+        
+    .navigation.responsive a {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
